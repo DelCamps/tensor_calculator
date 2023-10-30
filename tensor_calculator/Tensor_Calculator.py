@@ -33,21 +33,18 @@ class TensorCalculator:
         result = torch.matmul(tensor1, tensor2)
         return result
 
+    @staticmethod
+    def tensor_reshape(tensor, new_shape):
+        reshaped = torch.reshape(tensor, new_shape)
+        return reshaped
 
+    @staticmethod
+    def tensor_concatenate(tensor1, tensor2, axis):
+        concatenated_tensor = torch.cat((tensor1, tensor2), dim=axis)
+        return concatenated_tensor
 
-dim_x = 3
-dim_y = 3
-dim_z = 3
-num = 2
+    @staticmethod
+    def tensor_split(tensor, split_size_or_sections, dim):
+        split_tensors = torch.split(tensor, split_size_or_sections, dim=dim)
+        return split_tensors
 
-one_tensor = TensorCalculator.tensor_ones(dim_x, dim_y, dim_z)
-print(one_tensor)
-
-random_tensor = TensorCalculator.tensor_random(dim_x, dim_y, dim_z)
-print(random_tensor)
-
-sum_tensor = TensorCalculator.tensor_sum(one_tensor,random_tensor)
-print(sum_tensor)
-
-sum_tensor = TensorCalculator.tensor_sum(one_tensor,random_tensor)
-print(sum_tensor)
