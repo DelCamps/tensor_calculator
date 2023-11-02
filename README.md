@@ -8,40 +8,49 @@ For this assignment, I created a PyTorch module that can be used by the Machine 
 ## Installation
 You can install my module using the following pip command:
 
-```bash
 pip install https://github.com/DelCamps/tensor_calculator.git
-```
-
-## Usage
+Usage
 Once you've installed the module, you can utilize it in your Python code as demonstrated below:
 
-```python
-import your_module_name as tm
-
-# Create a tensor with all zeros
-zeros_tensor = tm.zeros_tensor()
+python
+Copy code
+import tensor_calculator.Tensor_Calculator as tc
 
 # Create a tensor with all ones
-ones_tensor = tm.ones_tensor()
+ones_tensor = tc.tensor_ones(dim_x, dim_y, dim_z)
+
+# Create a tensor with all zeros
+zeros_tensor = tc.tensor_zeros(dim_x, dim_y, dim_z)
 
 # Create a tensor with random values
-random_tensor = tm.random_tensor()
+random_tensor = tc.tensor_random(dim_x, dim_y, dim_z)
 
 # Perform tensor addition
-result_sum = tm.add_tensors(tensor1, tensor2)
+result_sum = tc.tensor_sum(tensor1, tensor2)
 
-# Perform tensor multiplication
-result_multiply = tm.multiply_tensors(tensor1, tensor2)
-```
+# Perform element-wise multiplication
+result_multiply = tc.tensor_elementwise_multiplication(tensor, num)
 
-## Additional Functions
+# Perform matrix multiplication
+result_matrix_multiply = tc.tensor_multiplication(tensor1, tensor2)
+
+# Reshape a tensor
+result_reshaped = tc.tensor_reshape(tensor, new_shape)
+
+# Concatenate two tensors along a specified axis
+result_concatenated = tc.tensor_concatenate(tensor1, tensor2, axis)
+
+# Split a tensor along a specified axis
+result_split = tc.tensor_split(tensor, split_size_or_sections, dim)
+Additional Functions
 As part of this assignment, I decided to go beyond the basic requirements and implemented additional functions to showcase my creativity and skills. These functions include:
 
-1. **Tensor Subtraction:**
-   - I added a function to subtract two tensors, allowing for more flexible tensor manipulation.
+Tensor Subtraction:
 
-2. **Matrix Transposition:**
-   - Another useful function I implemented is for transposing a 2D tensor, which can be handy for various data transformations.
+I added a function to subtract two tensors, allowing for more flexible tensor manipulation.
+Matrix Transposition:
 
-3. **Element-wise Division:**
-   - I created a function that performs element-wise division of two tensors, extending the range of operations available.
+Another useful function I implemented is for transposing a 2D tensor, which can be handy for various data transformations.
+Element-wise Division:
+
+I created a function that performs element-wise division of two tensors, extending the range of operations available.
