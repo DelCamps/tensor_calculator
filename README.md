@@ -18,31 +18,31 @@ Once you've installed the module, you can utilize it in your Python code as demo
 import tensor_calculator.Tensor_Calculator as tc
 
 # Create a tensor with all ones
-ones_tensor = tc.tensor_ones(dim_x, dim_y, dim_z)
+ones_tensor = tc.TensorCalculator.tensor_ones(dim_x, dim_y, dim_z)
 
 # Create a tensor with all zeros
-zeros_tensor = tc.tensor_zeros(dim_x, dim_y, dim_z)
+zeros_tensor = tc.TensorCalculator.tensor_zeros(dim_x, dim_y, dim_z)
 
 # Create a tensor with random values
-random_tensor = tc.tensor_random(dim_x, dim_y, dim_z)
+random_tensor = tc.TensorCalculator.tensor_random(dim_x, dim_y, dim_z)
 
 # Perform tensor addition
-result_sum = tc.tensor_sum(tensor1, tensor2)
+result_sum = tc.TensorCalculator.tensor_sum(tensor1, tensor2)
 
 # Perform element-wise multiplication
-result_multiply = tc.tensor_elementwise_multiplication(tensor, num)
+result_multiply = tc.TensorCalculator.tensor_elementwise_multiplication(tensor, num)
 
 # Perform matrix multiplication
-result_matrix_multiply = tc.tensor_multiplication(tensor1, tensor2)
+result_matrix_multiply = tc.TensorCalculator.tensor_multiplication(tensor1, tensor2)
 
 # Reshape a tensor
-result_reshaped = tc.tensor_reshape(tensor, new_shape)
+result_reshaped = tc.TensorCalculator.tensor_reshape(tensor, new_shape)
 
 # Concatenate two tensors along a specified axis
-result_concatenated = tc.tensor_concatenate(tensor1, tensor2, axis)
+result_concatenated = tc.TensorCalculator.tensor_concatenate(tensor1, tensor2, axis)
 
 # Split a tensor along a specified axis
-result_split = tc.tensor_split(tensor, split_size_or_sections, dim)
+result_split = tc.TensorCalculator.tensor_split(tensor, split_size_or_sections, dim)
 ```
 ## Additional Functions
 
