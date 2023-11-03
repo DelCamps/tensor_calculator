@@ -1,19 +1,20 @@
-# PyTorch 2D Tensor Calculator
+# PyTorch 3D Tensor Calculator
 
-Welcome to my Machine Learning assignment where I've built a PyTorch module capable of performing various operations on 2D tensors. In this README, I will provide instructions for installation and usage of the module, as well as details about additional creative functions I've implemented.
+Welcome to my Machine Learning assignment where I've built a PyTorch module capable of performing various operations on 3D tensors. In this README, I will provide instructions for installation and usage of the module, as well as details about additional creative functions I've implemented.
 
 ## Introduction
-For this assignment, I created a PyTorch module that can be used by the Machine Learning community. The module is designed to perform fundamental operations on 2D tensors using PyTorch.
+For this assignment, I created a PyTorch module that can be used by the Machine Learning community. The module is designed to perform fundamental operations on 3D tensors using PyTorch.
 
 ## Installation
 You can install my module using the following pip command:
+```bash
+pip install -U git+https://github.com/DelCamps/tensor_calculator.git
 
-pip install https://github.com/DelCamps/tensor_calculator.git
-Usage
+```
+## Usage
 Once you've installed the module, you can utilize it in your Python code as demonstrated below:
 
-python
-Copy code
+```python
 import tensor_calculator.Tensor_Calculator as tc
 
 # Create a tensor with all ones
@@ -42,15 +43,46 @@ result_concatenated = tc.tensor_concatenate(tensor1, tensor2, axis)
 
 # Split a tensor along a specified axis
 result_split = tc.tensor_split(tensor, split_size_or_sections, dim)
-Additional Functions
-As part of this assignment, I decided to go beyond the basic requirements and implemented additional functions to showcase my creativity and skills. These functions include:
+```
+## Additional Functions
 
-Tensor Subtraction:
+### tensor_elementwise_multiplication
+#### Description
+This function performs element-wise multiplication of a given tensor by a specified scalar value. It multiplies each element in the tensor by the provided scalar.
 
-I added a function to subtract two tensors, allowing for more flexible tensor manipulation.
-Matrix Transposition:
+```python
+result = tc.tensor_elementwise_multiplication(tensor, num)
+```
+### tensor_multiplication
 
-Another useful function I implemented is for transposing a 2D tensor, which can be handy for various data transformations.
-Element-wise Division:
+#### Description
+This function computes the matrix multiplication (dot product) between two input tensors. It is equivalent to performing matrix multiplication in 2D linear algebra.
 
-I created a function that performs element-wise division of two tensors, extending the range of operations available.
+```python
+result = tc.tensor_multiplication(tensor1, tensor2)
+```
+### tensor_reshape
+#### Description
+This function reshapes a given tensor into a new shape specified by the user. The resulting tensor has the same total number of elements as the original tensor.
+
+
+```python
+result = tc.tensor_reshape(tensor, new_shape)
+```
+### tensor_concatenate
+#### Description
+This function concatenates two input tensors along a specified axis. It combines the tensors to create a larger tensor in the specified dimension.
+
+
+```python
+result = tc.tensor_concatenate(tensor1, tensor2, axis)
+```
+### tensor_split
+
+#### Description
+This function splits a given tensor along a specified axis into multiple smaller tensors. You can specify the size or the number of sections in which to split the tensor.
+
+
+```python
+result = tc.tensor_split(tensor, split_size_or_sections, dim)
+```
